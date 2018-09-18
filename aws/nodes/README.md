@@ -3,7 +3,7 @@
 #### _To access your instance:_
 * Open an SSH client. (find out how to connect using PuTTY)
 * Locate your corresponding private key file. The wizard automatically detects the key you used to launch the instance.
-* Use this command if needed: _chmod 400 <key file>_
+* Use this command if needed: _chmod 400 key_file_
 * Connect to your instance using its Public DNS: 
 ** node1: ssh -i "node1.pem" root@ec2-3-120-32-232.eu-central-1.compute.amazonaws.com
 ** node2: ssh -i "node2.pem" root@ec2-35-157-140-137.eu-central-1.compute.amazonaws.com
