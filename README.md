@@ -9,9 +9,10 @@
 ### _Computing power requirements_
 
 #### _Kafka_
-*
-*
-*
+The full Confluent distribution will be installed on one node (Kafka, Zookeeper, Connect, KSQL)
+* 4vCPU
+* 16GB memory
+* 40GB storage
 
 #### _myAXA Pusher_
 *
