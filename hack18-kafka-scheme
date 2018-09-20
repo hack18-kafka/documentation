@@ -42,7 +42,6 @@
 				},
 				"flightCompanyHelpLink": {
 					"type": "string",
-					"minimum": 30,
 					"description": "help link in URL format, e.g. http://swiss.com/delay"
 				}
 			}
