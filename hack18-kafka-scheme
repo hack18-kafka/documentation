@@ -1,0 +1,248 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	
+	"definitions": {
+		
+		"geoLocEvent": {
+			"title": "User Geolocation Event",
+			"description": "1st Event - geolocation data of an myAXA user",
+			"required": [ "userId", "geoLocation" ],
+			"type": "object",
+			"properties": {
+				"userId": {
+					"type": "string", 
+					"description": "uuid"
+				},
+				"geoLocation": {
+                    "type": "object",
+                    "items": { "$ref": "#/definitions/GeoLocation" }
+                }
+			}
+		},
+		
+		"flightDelayEvent": {
+			"title": "Flight Delay Event",
+			"description": "2nd Event - information about flight delays",
+			"required": [ "flight", "flightStatus" ],
+			"type": "object",
+			"properties": {
+				"flight": {
+					"type": "object", 
+					"items": { "$ref": "#/definitions/Flight" }
+				},
+				"flightStatus": {
+					"type": "string", 
+					"description": "type of flight trouble",
+					"enum": [ "delayed", "cancelled" ]
+				},
+				"flightDelay": {
+					"type": "number",
+					"minimum": 30,
+					"description": "flight delay in minutes"
+				},
+				"flightCompanyHelpLink": {
+					"type": "string",
+					"minimum": 30,
+					"description": "help link in URL format, e.g. http://swiss.com/delay"
+				}
+			}
+		},
+		
+		"weatherForecastEvent": {
+			"title": "Weather Forecast Event",
+			"description": "3rd Event - information about critical weather condiditions in a certain region",
+			"required": [ "geoLocation", "warning" ],
+			"type": "object",
+			"properties": {
+				"geoLocation": {
+                    "type": "object",
+                    "items": { "$ref": "#/definitions/GeoLocation" }
+                },
+				"warning": {
+                    "type": "object",
+                    "items": { "$ref": "#/definitions/Warning" }
+                }
+			}
+		},
+		
+		"socialEvent": {
+			"title": "Social Event",
+			"description": "4th Event - information about social events in a certain region",
+			"required": [ "geoLocation", "event" ],
+			"type": "object",
+			"properties": {
+				"geoLocation": {
+                    "type": "object",
+                    "items": { "$ref": "#/definitions/GeoLocation" }
+                },
+				"event": {
+                    "type": "object",
+                    "items": { "$ref": "#/definitions/Event" }
+                }
+			}
+		},
+		
+		"userProfile": {
+			"title": "User Profile Data",
+			"description": "5th Event - myAXA user information",
+			"required": [ "userId", "firstName", "lastName" ],
+			"type": "object",
+			"properties": {
+				"userId": {
+					"type": "string", 
+					"description": "uuid"
+				},
+				"firstName": {
+					"type": "string", 
+					"description": "first name of myAxa user"
+				},
+				"lastName": {
+					"type": "string", 
+					"description": "last name of myAxa user"
+				},
+				"flight": {
+					"type": "object", 
+					"items": { "$ref": "#/definitions/Flight" }
+				},
+				"subscribedLocations": {
+					"type": "array", 
+					"items": { "$ref": "#/definitions/GeoLocation" }
+				}
+			}
+		},
+		
+		"myAxaLogEvent": {
+			"title": "My AXA Log Event",
+			"description": "6th Event - myAXA logs as events",
+			"required": [ "userId", "myAxaEventType", "myAxaEventTimestamp" ],
+			"type": "object",
+			"properties": {
+				"userId": {
+					"type": "string", 
+					"description": "uuid"
+				},
+				"myAxaEventType": {
+					"type": "number", 
+					"description": "Code of a myAxa event",
+					"enum": [ 1, 2, 3, 4, 5 ]
+				},
+				"myAxaEventTimestamp": {
+					"type": "string", 
+					"description": "timestamp of myAxa event, UTC formatted: e.g. 2015-12-03T12:23:01.123Z"
+				},
+				"myAxaEventMessage": {
+					"type": "string", 
+					"description": "Explanation of myAXA event"
+				}
+			}
+		},
+		
+		"myAxaViewNotification": {
+			"title": "My AXA View Notification",
+			"description": "7th Event - myAXA notification that the user has read the message",
+			"required": [ "userId", "kafkaEventId" ],
+			"type": "object",
+			"properties": {
+				"userId": {
+					"type": "string", 
+					"description": "uuid"
+				},
+				"kafkaEventId": {
+					"type": "string", 
+					"description": "technical Kafka event ID"
+				}
+			}
+		},
+		
+		"GeoLocation": {
+		  "type": "object",
+			"properties": {
+				"country": {
+					"type": "string", 
+					"description": "country name",
+					"enum": [ "Switzerland", "Germany", "France" ]
+				},
+				"city": {
+					"type": "string", 
+					"description": "city name"
+				},
+				"region": {
+					"type": "string", 
+					"description": "country region name"
+				}
+			},
+			"required": [ "country", "city" ]
+		},
+		
+		"Flight": {
+			"type": "object",
+				"properties": {
+					"flightCompany": {
+						"type": "string", 
+						"description": "flight provider",
+						"enum": ["LX", "AF", "BA"]
+					},
+					"flightNumber": {
+						"type": "number",
+						"minimum": 101,
+						"maximum": 999, 
+						"description": "flight ID"
+					},
+					"flightDate": {
+						"type": "string", 
+						"description": "flight departure timestamp, UTC formatted: e.g. 2015-12-03T12:23:01.123Z"
+					}
+				},
+				"required": [ "flightCompany", "flightNumber", "flightDate" ]
+		},
+		
+		"Event": {
+			"type": "object",
+				"properties": {
+					"eventType": {
+						"type": "string", 
+						"description": "what kind of event takes palce",
+						"enum": ["demo", "strike", "terror", "festivity", "carneval", "tripWarning"]
+					},
+					"eventMood": {
+						"type": "number", 
+						"description": "is event negative or positive",
+						"enum": [-1, 1]
+					},
+					"eventBegin": {
+						"type": "string", 
+						"description": "event begin timestamp, UTC formatted: e.g. 2015-12-03T12:23:01.123Z"
+					},
+					"eventEnd": {
+						"type": "string", 
+						"description": "event end timestamp, UTC formatted: e.g. 2015-12-03T12:23:01.123Z"
+					}
+				},
+				"required": [ "eventType", "eventMood", "eventBegin" ]
+		},
+		
+		"Warning": {
+			"type": "object",
+				"properties": {
+					"warningType": {
+						"type": "string", 
+						"description": "what kind of warning will be send",
+						"enum": [ "heat", "storm", "strongRain", "hurricane", "earthquake", "flood" ]
+					},
+					"warningMessage": {
+						"type": "string", 
+						"description": "explanatory warning message"
+					},
+					"warningBegin": {
+						"type": "string", 
+						"description": "warning begin timestamp, UTC formatted: e.g. 2015-12-03T12:23:01.123Z"
+					},
+					"warningEnd": {
+						"type": "string", 
+						"description": "warning end timestamp, UTC formatted: e.g. 2015-12-03T12:23:01.123Z"
+					}
+				},
+				"required": [ "warningType", "warningMessage", "warningBegin" ]
+		}
+	}
+}
