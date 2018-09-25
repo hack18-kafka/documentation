@@ -5,7 +5,7 @@
 		
 		"geoLocEvent": {
 			"title": "User Geolocation Event",
-			"description": "1st Event - geolocation data of an myAXA user",
+			"description": "1st Event - myAXA user geolocation data",
 			"required": [ "userId", "geoLocation" ],
 			"type": "object",
 			"properties": {
@@ -14,9 +14,9 @@
 					"description": "uuid"
 				},
 				"geoLocation": {
-                    "type": "object",
-                    "items": { "$ref": "#/definitions/GeoLocation" }
-                }
+				    "type": "object",
+				    "items": { "$ref": "#/definitions/GeoLocation" }
+                		}
 			}
 		},
 		
@@ -99,7 +99,7 @@
 					"type": "string", 
 					"description": "last name of myAxa user"
 				},
-				"flight": {
+				"subscribedFlight": {
 					"type": "object", 
 					"items": { "$ref": "#/definitions/Flight" }
 				},
@@ -186,6 +186,10 @@
 						"minimum": 101,
 						"maximum": 999, 
 						"description": "flight ID"
+					},
+					"flightDestination": {
+						"type": "object", 
+						"items": { "$ref": "#/definitions/GeoLocation" }
 					},
 					"flightDate": {
 						"type": "string", 
