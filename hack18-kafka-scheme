@@ -196,7 +196,7 @@
 						"description": "flight departure timestamp, UTC formatted: e.g. 2015-12-03T12:23:01.123Z"
 					}
 				},
-				"required": [ "flightCompany", "flightNumber", "flightDate" ]
+				"required": [ "flightCompany", "flightNumber", "flightDate", "flightDestination" ]
 		},
 		
 		"Event": {
