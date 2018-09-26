@@ -171,9 +171,17 @@
 				"region": {
 					"type": "string", 
 					"description": "country region name"
+				},
+				"longitude": {
+					"type": "float", 
+					"description": "geo location longitude"
+				},
+				"latitude": {
+					"type": "float", 
+					"description": "geo location latitude"
 				}
 			},
-			"required": [ "country", "city" ]
+			"required": [ "country", "city", "longitude", "latitude" ]
 		},
 		
 		"Flight": {
