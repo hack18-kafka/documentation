@@ -187,9 +187,13 @@
 						"maximum": 999, 
 						"description": "flight ID"
 					},
+					"flightDeparture": {
+						"type": "string", 
+						"enum": [ "Zürich", "Paris", "München" ]
+					},
 					"flightDestination": {
-						"type": "object", 
-						"items": { "$ref": "#/definitions/GeoLocation" }
+						"type": "string", 
+						"enum": [ "London", "New York", "San Francisco", "St. Petersburg", "Sidney", "Tokyo" ]
 					},
 					"flightDate": {
 						"type": "string", 
@@ -205,7 +209,7 @@
 					"eventType": {
 						"type": "string", 
 						"description": "what kind of event takes palce",
-						"enum": ["demo", "strike", "terror", "festivity", "carneval", "tripWarning"]
+						"enum": ["demo", "strike", "terror", "festivity", "carnival", "trip warning"]
 					},
 					"eventMood": {
 						"type": "number", 
@@ -230,7 +234,7 @@
 					"warningType": {
 						"type": "string", 
 						"description": "what kind of warning will be send",
-						"enum": [ "heat", "storm", "strongRain", "hurricane", "earthquake", "flood" ]
+						"enum": [ "heat", "storm", "strong rain", "hurricane", "earthquake", "flood" ]
 					},
 					"warningMessage": {
 						"type": "string", 
