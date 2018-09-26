@@ -28,7 +28,7 @@ Edit your `~/.ssh/config` file, and add the following section.
 
 ```
 Host axanode1
-  Hostname 18.184.19.115
+  Hostname aaa.bbb.ccc.ddd
   User centos
   IdentityFile ~/path/to/node1.pem
   PreferredAuthentications publickey
