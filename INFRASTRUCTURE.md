@@ -19,8 +19,8 @@ Hackathon infrastructure details
 | Name | EIP | Private IP | OS  | RAM | Disk | Role |
 | ---- | --- | ---------- | --- | --- | ---- | ---- | 
 | Node1 | 18.184.19.115 | 172.31.38.55  | Centos | 16GB | 50GB | Kafka, Zookeeper, DNS, proxy |
-| Node2 | 52.29.223.176 | 172.31.41.242 | Centos | 16GB | 8GB  | ELK |
-| Node3 | 54.93.202.198 | 172.31.33.107 | Centos | 8GB  | 8GB  | Mongodb, DNS |
+| Node2 | 52.29.223.176 | 172.31.41.242 | Centos | 16GB | 50GB | ELK |
+| Node3 | 54.93.202.198 | 172.31.33.107 | Centos | 8GB  | 50GB | Mongodb, DNS |
 | Node4 | 18.195.137.44 | 172.31.37.87  | Centos | 8GB  | 8GB  | NodeJS, DNS |
 
 
