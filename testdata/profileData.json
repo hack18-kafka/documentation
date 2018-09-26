@@ -1,7 +1,7 @@
 [{"userId":"5330B441-FE9B-442D-BCA7-868C5D9855C6","firstname":"Yvonne","lastname":"Grünwald","subscribedLocations":"Zürich"},
 {"userId":"f61023ae-0583-427d-9802-b1a4db167889","firstname":"Merissa","lastname":"Dreher","flight":{"company":"BA","number":335,"flightDeparture":"Zürich","flightDestination":"London","flightDate":"2018-09-26T16:28:50Z"},"subscribedLocations":"Paris"},
 {"userId":"2d426e07-6e69-4b90-b0e8-174b319ca2d6","firstname":"Niels","lastname":"Andrew","flight":{"company":"LX","number":739,"flightDeparture":"München","flightDestination":"San Francisco","flightDate":"2018-09-26T20:58:56Z"},"subscribedLocations":"Berlin"},
-{"userId":"aae55acb-9ff6-431c-8e32-0c0a52035546","firstname":"Ivor","lastname":"Kempshall","subscribedLocations":["St. Petersburg"]},
+{"userId":"aae55acb-9ff6-431c-8e32-0c0a52035546","firstname":"Ivor","lastname":"Kempshall","subscribedLocations":"Zürich"},
 {"userId":"1481d619-e2e9-41c3-883f-79bd6d6482d8","firstname":"Sharlene","lastname":"Coster","flight":{"company":"AF","number":667,"flightDeparture":"Zürich","flightDestination":"New York","flightDate":"2018-09-26T05:12:44Z"},"subscribedLocations":"Zürich"},
 {"userId":"aa11eefc-cade-4ad9-9ec4-b685e50f65e0","firstname":"Austina","lastname":"Varnes","subscribedLocations":"Paris"},
 {"userId":"c9225e8c-f79b-4306-a850-c5f6d0b0e1bf","firstname":"Teodoro","lastname":"Geeves","flight":{"company":"LX","number":922,"flightDeparture":"München","flightDestination":"London","flightDate":"018-09-26T02:07:49Z"},"subscribedLocations":"Lyon"},
