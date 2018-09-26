@@ -12,7 +12,7 @@ Hackathon infrastructure details
 | Schema Registry | schema-registry.service.ocean:8081 | https://schema-regirsty.api.axa.sqooba.io |
 | Kafka Connect | connect.service.ocean:8083 | https://connect.api.axa.sqooba.io |
 | KSQL | ksql.service.ocean:8088 | https://ksql.api.axa.sqooba.io |
-
+| MongoDB | mongodb.service.ocean:27017 | n/a |
 
 # EC2 Instances
 
