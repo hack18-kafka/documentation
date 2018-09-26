@@ -105,7 +105,10 @@
 				},
 				"subscribedLocations": {
 					"type": "array", 
-					"items": { "$ref": "#/definitions/GeoLocation" }
+					"items": {
+						"type": "string",
+						"enum": [ "London", "New York", "San Francisco", "St. Petersburg", "Sidney", "Tokyo", "Zürich", "Paris", "München"]
+					}
 				}
 			}
 		},
