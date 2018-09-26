@@ -15,6 +15,7 @@ Hackathon infrastructure details
 | KSQL | ksql.service.ocean:8088 | https://ksql.api.axa.sqooba.io |
 | Confluent Control Center | control-center.service.ocean:9021 | https://control-center.api.axa.sqooba.io |
 | MongoDB | mongodb.service.ocean:27017 | n/a |
+| Kibana | kibana.service.ocean:5601 | https://kibana.api.axa.sqooba.io |
 
 # EC2 Instances
 
