@@ -32,19 +32,20 @@ Edit your `~/.ssh/config` file, and add the following section.
 Host axanode1
   Hostname 18.184.19.115
   User centos
-  IdentityFile ~/Projects/sqooba/provisioning-ng/inventories/axa/node1.pem
+  IdentityFile ~/path/to/node1.pem
   PreferredAuthentications publickey
   ControlPath ~/.ssh/ssh_control_%h_%p_%r
 ```
 
 Please adapt `IdentityFile` to your need,
-and repeat the same section for the other nodes (updating `Hostname`)
+and repeat the same section for the other nodes (updating `Hostname` to point to EIP in the table above)
 
 You can now `ssh axanode1`
 
 # DNS Setup
 
-Using sshuttle
+Using sshuttle and forwarding the DNS, you'll be able to resolve the DNS on your laptop
+and thus have a consistent experience for the setup available on the team nodes.
 
 ```
 sshuttle -r axanode1 --dns --to-ns 172.31.38.55 172.31.0.0/16
