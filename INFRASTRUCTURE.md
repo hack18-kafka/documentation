@@ -13,6 +13,7 @@ Hackathon infrastructure details
 | Kafka Connect | connect.service.ocean:8083 | https://connect.api.axa.sqooba.io |
 | Kafka REST | kafka-rest.service.ocean:8082 | https://kafka-rest.api.axa.sqooba.io |
 | KSQL | ksql.service.ocean:8088 | https://ksql.api.axa.sqooba.io |
+| Confluent Control Center | control-center.service.ocean:9021 | https://control-center.api.axa.sqooba.io |
 | MongoDB | mongodb.service.ocean:27017 | n/a |
 
 # EC2 Instances
