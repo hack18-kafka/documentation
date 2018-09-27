@@ -42,7 +42,7 @@ read foo
 
 echo "pushing OKTOBERFEST"
 /home/centos/confluent-5.0.0/bin/kafka-console-producer --broker-list kafka.service.ocean:9092 -topic social_event_raw <<EOF
-{"geoLocation":{"country":"Germany","city":"Munich","longitude":11.5761249,"latitude":48.137154},"event":{"eventType":"festivity","eventMood": 1,"eventBegin":"2018-09-27T09:43:53Z","eventEnd":"2018-10-11T21:07:29Z"}}
+{"geoLocation":{"country":"Germany","city":"Munich","longitude":11.5761249,"latitude":48.137154},"event":{"eventType":"festivity","eventMood": 1,"eventBegin":"2018-09-22T09:43:53Z","eventEnd":"2018-10-07T21:07:29Z"}}
 EOF
 echo "OKTOBERFEST pushed"
 
