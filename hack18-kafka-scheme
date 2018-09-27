@@ -104,11 +104,9 @@
 					"items": { "$ref": "#/definitions/Flight" }
 				},
 				"subscribedLocations": {
-					"type": "array", 
-					"items": {
-						"type": "string",
-						"enum": [ "London", "New York", "San Francisco", "St. Petersburg", "Sidney", "Tokyo", "Zürich", "Paris", "München"]
-					}
+					"type": "string",
+					"enum": [ "Lyon", "Luzern", "Bern", "Berlin", "Hamburg", "Brest", "Zürich", "Paris", "München"]
+				
 				}
 			}
 		},
@@ -171,9 +169,17 @@
 				"region": {
 					"type": "string", 
 					"description": "country region name"
+				},
+				"longitude": {
+					"type": "float", 
+					"description": "geo location longitude"
+				},
+				"latitude": {
+					"type": "float", 
+					"description": "geo location latitude"
 				}
 			},
-			"required": [ "country", "city" ]
+			"required": [ "country", "city", "longitude", "latitude" ]
 		},
 		
 		"Flight": {

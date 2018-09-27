@@ -1,0 +1,7 @@
+GEOLOCATION: {"userId":"5330B441-FE9B-442D-BCA7-868C5D9855C6","geoLocation":{"country":"Switzerland","city":"Zurich","longitude":8.55,"latitude":47.36667}}
+
+OKTOBERFEST: {"geoLocation":{"country":"Germany","city":"Munchen","longitude":11.5761249,"latitude":48.137154},"event":{"eventType":"festivity","eventMood": 1,"eventBegin":"2018-09-27T09:43:53Z","eventEnd":"2018-10-11T21:07:29Z"}}
+
+FLIGHT DELAY:{"flight":{"flightCompany":"LX","flightNumber":1111,"flightDeparture":"Zurich","flightDestination":"Munchen","flightDate":"2018-09-27T22:05:01Z"},"flightStatus":"delayed","flightDelay":60}
+
+HAIL: {"geoLocation":{"country":"Switzerland","city":"Zurich","longitude":8.55,"latitude":47.36667},"warning":{"warningType":"hail","warningMessage":"strong hail in Zurich! Be careful!","warningBegin":"2018-09-27T16:32:26Z"}}

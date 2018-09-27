@@ -9,7 +9,7 @@ Hackathon infrastructure details
 | ------- | -------- | ------------ |
 | Kafka   | kafka.service.ocean:9092 | n/a |
 | Zookeeper | zookeeper.service.ocean:2181 | n/a |
-| Schema Registry | schema-registry.service.ocean:8081 | https://schema-regirsty.api.axa.sqooba.io |
+| Schema Registry | schema-registry.service.ocean:8081 | https://schema-registry.api.axa.sqooba.io |
 | Kafka Connect | connect.service.ocean:8083 | https://connect.api.axa.sqooba.io |
 | Kafka REST | kafka-rest.service.ocean:8082 | https://kafka-rest.api.axa.sqooba.io |
 | KSQL | ksql.service.ocean:8088 | https://ksql.api.axa.sqooba.io |
@@ -28,7 +28,7 @@ Edit your `~/.ssh/config` file, and add the following section.
 
 ```
 Host axanode1
-  Hostname 18.184.19.115
+  Hostname aaa.bbb.ccc.ddd
   User centos
   IdentityFile ~/path/to/node1.pem
   PreferredAuthentications publickey
