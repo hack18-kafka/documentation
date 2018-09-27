@@ -1,4 +1,4 @@
-# KSQL queries for event #4
+# KSQL queries for event #3
 
 ```
 CREATE STREAM location_with_city
