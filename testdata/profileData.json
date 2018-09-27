@@ -1,4 +1,4 @@
-[{"userId":"5330B441-FE9B-442D-BCA7-868C5D9855C6","firstname":"Yvonne","lastname":"Grünwald","subscribedLocations":"Zurich", "flight":{"company":"LX","number":1111,"flightDeparture":"Zurich","flightDestination":"Munchen","flightDate":"2018-09-27T22:05:01Z"}}
+[{"userId":"5330B441-FE9B-442D-BCA7-868C5D9855C6","firstname":"Yvonne","lastname":"Grünwald","subscribedLocations":"Zurich", "flight":{"company":"LX","number":1111,"flightDeparture":"Zurich","flightDestination":"Munchen","flightDate":"2018-09-27T22:05:01Z"}},
 {"userId":"f61023ae-0583-427d-9802-b1a4db167889","firstname":"Merissa","lastname":"Dreher","flight":{"company":"BA","number":335,"flightDeparture":"Zürich","flightDestination":"London","flightDate":"2018-09-26T16:28:50Z"},"subscribedLocations":"Paris"},
 {"userId":"2d426e07-6e69-4b90-b0e8-174b319ca2d6","firstname":"Niels","lastname":"Andrew","flight":{"company":"LX","number":739,"flightDeparture":"München","flightDestination":"San Francisco","flightDate":"2018-09-26T20:58:56Z"},"subscribedLocations":"Berlin"},
 {"userId":"aae55acb-9ff6-431c-8e32-0c0a52035546","firstname":"Ivor","lastname":"Kempshall","subscribedLocations":"Zürich"},
