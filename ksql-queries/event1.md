@@ -21,6 +21,7 @@ fd.flightDelay,
 fd.flightCompanyHelpLink,
 fd.flight['flightCompany'] AS flightCompany,
 fd.flight['flightNumber'] AS flightNumber,
+fd.flight['flightDeparture'] AS flightDeparture,
 fd.flight['flightDestination'] AS flightDestination,
 fd.flight['flightDate'] AS flightDate,
 fd.flight['flightCompany'] + '-' +  fd.flight['flightNumber'] AS flightid
@@ -30,7 +31,12 @@ FROM flight_delay_event_raw fd;
 ### Join query
 ```
 CREATE STREAM join_user_flight_event 
-AS SELECT u.userid, f.flightStatus, f.flightDelay, f.flightCompanyHelpLink, f.flightDestination, f.flightDate, f.flightid
+AS SELECT u.userid, f.flightStatus, f.flightDelay, 
+f.flightCompanyHelpLink, 
+f.flightDeparture AS flightDeparture, 
+f.flightDestination AS flightDestination, 
+f.flightDate AS flightDate, 
+f.flightid AS flightId
 FROM user_with_flight_id u
 JOIN flight_delay_with_flight_id f WITHIN 10 minute ON u.flightid = f.flightid;
 ```
@@ -42,8 +48,9 @@ JOIN flight_delay_with_flight_id f WITHIN 10 minute ON u.flightid = f.flightid;
     "FLIGHTSTATUS": "cancelled",
     "FLIGHTDELAY": null,
     "FLIGHTCOMPANYHELPLINK": "https://www.swiss.com/ca/en/book/flight-information/arrivals-and-departures.html",
-    "F_FLIGHTDESTINATION": "St. Petersburg",
-    "F_FLIGHTDATE": "2018-09-26T12:54:46Z",
-    "F_FLIGHTID": "LX-739"
+    "FLIGHTDEPARTURE": "Paris",
+    "FLIGHTDESTINATION": "St. Petersburg",
+    "FLIGHTDATE": "2018-09-26T12:54:46Z",
+    "FLIGHTID": "LX-739"
 }
 ```
