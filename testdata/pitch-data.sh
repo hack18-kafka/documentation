@@ -6,9 +6,15 @@ echo "START"
 
 echo "pushing USER PROFILE"
 /home/centos/confluent-5.0.0/bin/kafka-console-producer --broker-list kafka.service.ocean:9092 -topic user_profile_raw <<EOF
-{"userId":"5330B441-FE9B-442D-BCA7-868C5D9855C6","firstname":"Yvonne","lastname":"Grünwald","subscribedLocations":"Zurich", "flight":{"company":"LX","number":1111,"flightDeparture":"Zurich","flightDestination":"Munich","flightDate":"2018-09-27T22:05:01Z"}}
+{"userId":"5330B441-FE9B-442D-BCA7-868C5D9855C6","firstname":"Yvonne","lastname":"Grünwald","subscribedLocations":"Munich", "flight":{"company":"LX","number":1111,"flightDeparture":"Zurich","flightDestination":"Munich","flightDate":"2018-09-27T22:05:01Z"}}
 EOF
 echo "USER PROFILE pushed"
+
+echo "pushing GEOLOCATION"
+/home/centos/confluent-5.0.0/bin/kafka-console-producer --broker-list kafka.service.ocean:9092 -topic geo_loc_event_raw <<EOF
+{"userId":"5330B441-FE9B-442D-BCA7-868C5D9855C6","geoLocation":{"country":"Switzerland","city":"Zurich","longitude":8.55,"latitude":47.36667}}
+EOF
+echo "GEOLOCATION pushed"
 
 echo "***************************"
 echo "release FLIGHT DELAY - ENTER"
