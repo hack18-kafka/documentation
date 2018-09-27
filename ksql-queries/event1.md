@@ -34,3 +34,16 @@ AS SELECT u.userid, f.flightStatus, f.flightDelay, f.flightCompanyHelpLink, f.fl
 FROM user_with_flight_id u
 JOIN flight_delay_with_flight_id f WITHIN 10 minute ON u.flightid = f.flightid;
 ```
+
+### JSON doc on output topic
+```
+{
+    "USERID": "2d426e07-6e69-4b90-b0e8-174b319ca2d6",
+    "FLIGHTSTATUS": "cancelled",
+    "FLIGHTDELAY": null,
+    "FLIGHTCOMPANYHELPLINK": "https://www.swiss.com/ca/en/book/flight-information/arrivals-and-departures.html",
+    "F_FLIGHTDESTINATION": "St. Petersburg",
+    "F_FLIGHTDATE": "2018-09-26T12:54:46Z",
+    "F_FLIGHTID": "LX-739"
+}
+```
